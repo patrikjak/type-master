@@ -1,0 +1,298 @@
+* {
+		box-sizing: border-box;
+		outline: none;
+		user-select: none;
+}
+body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Montserrat', sans-serif;
+		background-color: #f5f5f5;
+		overflow-x: hidden;
+}
+
+.intro {
+		text-align: center;
+}
+.intro img {
+		display: block;
+		width: 20%;
+		margin: 5% auto;
+}
+.intro .easy,
+.intro .moderate,
+.intro .hard {
+		width: 50%;
+		margin: 2% auto;
+		padding: 1% 3%;
+		border-radius: 10px;
+		color: #ffffff;
+}
+.intro .easy {background-color: #598234;}
+.intro .moderate {background-color: #ff7e41;}
+.intro .hard {background-color: #ff2236;}
+
+button {
+		display: inline-block;
+		width: 15%;
+		padding: 1% 3%;
+		font-size: 20px;
+		margin: 2% 5%;
+		border: none;
+		background-color: #aebd38;
+		color: #ffffff;
+		border-radius: 10px;
+		cursor: pointer;
+		transition-duration: .5s;
+}
+button:hover {
+		transform: scale(1.1,1.1);
+}
+
+.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.9);
+		text-align: center;
+		color: #ffffff;
+		display: none;
+		overflow: auto;
+}
+#what-overlay h1 {
+		font-size: 50px;
+		margin: 5% 5% 3% 5%;
+}
+#what-overlay h2 {
+		font-size: 35px;
+		margin: 5% 5% 3% 5%;
+}
+#what-overlay p {
+		margin: 2% 5%;
+}
+#what-overlay button {
+		margin: 2% 5%;
+		background-color: #ff2236;
+}
+#difficulty button {
+		margin-top: 20%;
+}
+#difficulty button:first-child {
+		background-color: #598234;
+}
+#difficulty button:nth-child(2) {
+		background-color: #ff7e41;
+}
+#difficulty button:nth-child(3) {
+		background-color: #ff2236;
+}
+#difficulty #cancel {
+		display: block;
+		width: 20%;
+		margin: 5% auto;
+		background-color: #ff2236;
+}
+.playground {
+		display: none;
+		text-align: center;
+}
+.playground h1 {
+		margin-top: 3%;
+}
+#timer, #level {
+		font-weight: 700;
+}
+#info {
+		padding: 2% 3%;
+		background-color: #ff7e41;
+		width: 60%;
+		margin: 5% 20% 3% 20%;
+		color: #ffffff;
+		border-radius: 10px;
+}
+.playground #string-to-type {
+		margin: 2% 10%;
+}
+.playground #string {
+		font-family: 'Roboto Mono', monospace;
+		width: 80%;
+		margin: 2% 10%;
+		text-align: center;
+		word-wrap: break-word;
+}
+.playground textarea {
+		display: block;
+		width: 70%;
+		margin: 2% 15%;
+		padding: 1% 3%;
+		font-family: 'Roboto Mono', monospace;
+		text-align: center;
+		border: solid #ccc 1px;
+		resize: none;
+		border-radius: 10px;
+}
+.playground #submit {
+		display: block;
+		width: auto;
+		margin: 2% auto;
+}
+.line {
+		width: 90%;
+		height: 2px;
+		margin-left: 5%;
+		background-color: #ccc;
+}
+
+#end p {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 25px;
+}
+
+@media only screen and (max-width: 991.98px) {
+		button {
+				display: block;
+				width: 20%;
+				margin: 5% auto;
+		}
+}
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+		button {
+				display: block;
+				width: 20%;
+				margin: 5% auto;
+		}
+		#difficulty button:nth-child(1) {
+				margin-top: 5%;
+		}
+		#difficulty button {
+				margin-top: 0;
+		}
+		#info {
+				margin: 5% auto;
+		}
+		.playground p {
+				margin: 5% 10%;
+		}
+		.playground textarea {
+				margin: 10% auto;
+		}
+		.playground #submit {
+				padding: 3% 10px;
+				font-size: 18px;
+		}
+}
+@media only screen and (max-width: 767.98px) {
+		button {
+				width: 70%;
+				margin: 5% auto;
+				padding: 3%;
+		}
+		.intro img {
+				width: 50%;
+				margin: 15% auto;
+		}
+		.intro .easy, .intro .moderate, .intro .hard {
+				width: 90%;
+				margin: 5% auto;
+				padding: 5% 3%;
+		}
+		#what-overlay h1 {
+				margin: 15% 5% 10% 5%;
+		}
+		#what-overlay p {
+				margin: 10% 5%;
+		}
+		#difficulty button {
+				margin-top: 10%;
+		}
+		#difficulty button:nth-child(1) {
+				margin-top: 40%;
+		}
+		#difficulty button:nth-child(3) {
+				margin-bottom: 10%;
+		}
+		#difficulty #cancel {
+				width: 40%;
+		}
+		#info {
+				width: 80%;
+				margin: 15% 10% 5% 10%;
+		}
+		.playground p {
+				margin: 10%;
+		}
+		.playground textarea {
+				width: 90%;
+				margin: 10% auto 20% auto;
+				padding: 5%;
+		}
+		.playground #submit {
+				padding: 5% 10%;
+		}
+}
+@media only screen and (max-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+		#difficulty button:nth-child(1) {
+				margin-top: 5%;
+		}
+		#difficulty button {
+				margin-top: 0;
+		}
+		#info {
+				margin: 5% 10%;
+		}
+		.playground p {
+				margin: 5% 10%;
+		}
+		.playground textarea {
+				margin: 10% auto;
+		}
+		.playground #submit {
+				padding: 3% 10px;
+				font-size: 18px;
+		}
+}
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+		.intro img {
+				margin: 10% auto;
+		}
+		#what-overlay p {
+				margin: 6% 5%;
+		}
+		.playground textarea {
+				margin: 10% auto;
+		}
+}
+@media only screen and (max-width: 320px) and (max-height: 568px) {
+		.intro img {
+				width: 65%;
+		}
+		#what-overlay h1 {
+				font-size: 35px;
+		}
+		#what-overlay h2 {
+				font-size: 30px;
+		}
+		#what-overlay p {
+				font-size: 15px;
+				margin: 5%;
+		}
+		.intro .easy, .intro .moderate, .intro .hard {
+				margin: 3% auto;
+				padding: 3% 6%;
+				font-size: 15px;
+		}
+		.playground h1 {
+				margin: 10% 5%;
+		}
+		.playground p {
+				margin: 5% 10%;
+		}
+		.playground #submit {
+				font-size: 18px;
+		}
+}

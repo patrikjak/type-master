@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TypeMaster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="intro">
+        <img src="images/logo.png" alt="logo">
+        <p class="easy">Tvoj najvyšší dosiahnutý level (ľahká obtiažnosť): <span id="max-level-easy">Ešte ste nehrali</span></p>
+        <p class="moderate">Tvoj najvyšší dosiahnutý level (stredná obtiažnosť): <span id="max-level-moderate">Ešte ste nehrali</span></p>
+        <p class="hard">Tvoj najvyšší dosiahnutý level (ťažká obtiažnosť): <span id="max-level-hard">Ešte ste nehrali</span></p>
+        <button id="what">O čo ide ?</button>
+        <button id="play">Hrať</button>
+        <div class="overlay" id="what-overlay">
+            <h1>TypeMaster</h1>
+            <p>Opíš v danom čase najviac znakov</p>
+            <p>Over slovo, môžeš ho overiť aj enterom</p>
+            <p>Po každom dobre napísanom slove sa počet znakov v reťazci zväčší o 1, čim sa ti zvýši aj level</p>
+            <h2>Obtiažnosti</h2>
+            <p>Ľahká - iba písmená</p>
+            <p>Stredná - písmena s diakritikou</p>
+            <p>Ťažká - všetky písmená, čísla a symboly</p>
+            <button id="close">Zatvoriť</button>
+        </div>
+    </div>
+
+    <div class="game">
+        <div class="overlay" id="difficulty">
+            <button class="diff" data-diff="easy">Ľahká obtiažnosť</button>
+            <button class="diff" data-diff="moderate">Stredná obtiažnosť</button>
+            <button class="diff" data-diff="hard">Ťažká obtiažnosť</button>
+            <button id="cancel">Zavrieť</button>
+        </div>
+        <div class="playground">
+            <p id="info">Beží ti čas, píš čo najrýchlejšie ako vieš</p>
+            <p>Zostávajúci čas: <span id="timer">180</span> sekúnd</p>
+            <p>Level: <span id="level">0</span></p>
+            <h1>Reťazec znakov na prepísanie:</h1>
+            <p id="string"></p>
+            <div class="line"></div>
+            <textarea id="typedText"></textarea>
+            <button id="submit">Overiť (aj enterom)</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="end">
+        <p id="announcement">Oops, vypršal ti čas :(<br>
+        Tvoje skóre je <span id="score"></span></p>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
